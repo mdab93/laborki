@@ -1,0 +1,9 @@
+add_object A
+add_object a
+delete_object A
+add_object A
+add_object A -below A
+add_object a -below a
+display_object
+exit
+
