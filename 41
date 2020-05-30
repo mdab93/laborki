@@ -1,0 +1,3 @@
+add_object A
+write_file 41!
+exit

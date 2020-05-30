@@ -1,0 +1,5 @@
+add_object A
+add_object G
+add_object x -below A
+write_file 33test
+exit
