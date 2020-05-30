@@ -1,0 +1,5 @@
+add_object A
+add_object ab -below A
+add_object c -below A/ab
+display_object
+exit
