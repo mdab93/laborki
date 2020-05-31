@@ -1,0 +1,8 @@
+puts "test29"
+if {[catch {add_object}] == 0} {
+	puts "dzialanie niepoprawne"
+} else {
+	puts "dzialanie poprawne"
+}
+display_object
+exit

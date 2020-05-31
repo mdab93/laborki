@@ -1,0 +1,33 @@
+puts "test14"
+if {[catch {add_object A}] == 0} {
+        puts "OK - dodanie objektu A"
+} else {
+        puts "Error - dodanie objektu A"
+}
+
+if {[catch {add_object ab -below A}] == 0} {
+        puts "OK - dodanie objektu ab pod A"
+} else {
+        puts "Error - dodanie objektu ab pod A
+}
+
+if {[catch {add_object c -below A/ab}] == 0} {
+        puts "OK - dodanie objektu c pod A-ab"
+} else {
+        puts "Error - dodanie objektu c pod A-ab"
+}
+
+if {[catch {add_object G}] == 0} {
+        puts "OK - dodanie objektu G"
+} else {
+        puts "Error - dodanie objektu G"
+}
+
+if {[catch {add_object x -below A}] == 0} {
+        puts "OK - dodanie objektu x pod A"
+} else {
+        puts "Error - dodanie objektu x pod A"
+}
+
+display_object
+exit

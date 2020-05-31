@@ -1,0 +1,8 @@
+puts "Test2"
+add_object A
+if {[catch {display_object A}] == 0} {
+	puts "Error"
+} else {
+	puts "Dzialanie poprawne"
+}
+exit

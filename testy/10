@@ -1,0 +1,8 @@
+puts "test10"
+if {[catch {add_object A}] == 0} {
+	puts "OK"
+} else {
+	puts "Error"
+}
+display_object
+exit

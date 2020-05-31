@@ -1,0 +1,14 @@
+puts "test25"
+add_object A
+add_object ab -below A
+add_object c -below A/ab
+add_object G
+add_object x -below A
+if {[catch {add_object x -below G}] == 0} {
+	puts "dzialanie niepoprawne"
+} else {
+	puts "dzialanie poprawne"
+}
+display_object
+exit
+

@@ -1,0 +1,14 @@
+puts "test17"
+add_object A
+add_object ab -below A
+add_object c -below A/ab
+add_object G
+add_object x -below A
+
+if {[catch {add_object c -below A/ab}] == 0} {
+	puts "Bledne dzialanie"
+} else {
+	puts "Poprawne dzialanie"
+}
+display_object
+exit

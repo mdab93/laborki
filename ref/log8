@@ -2,8 +2,4 @@
 #### WSBShell_2019 1.3 ####
 ###########################
 
-Executing file: 8
-test8
-dzialanie poprawne
-A
-G
+[ERROR] File 'testy/8' does not exist.

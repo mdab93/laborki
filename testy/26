@@ -1,0 +1,20 @@
+puts "test26"
+add_object A
+add_object a
+delete_object A
+add_object A
+if {[catch {add_object A -below A}] == 0} {
+	puts "dzialanie niepoprawne"
+} else {
+	puts "dzialanie poprawne"
+}
+if {[catch {add_object a -below a}] == 0} {
+        puts "dzialanie niepoprawne"
+} else {
+        puts "dzialanie poprawne"
+}
+
+
+display_object
+exit
+

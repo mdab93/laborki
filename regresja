@@ -1,0 +1,21 @@
+#!/bin/bash
+
+pliki=`ls -1 testy/`
+
+for i in $pliki
+do
+	echo $i
+	WSBShell_2019 -execute_script testy/$i > "result/res$i"
+	
+	roznica=`diff ref/log$i result/res$i`
+	
+	echo $roznica
+	if [ "X$roznica" == "X" ]
+	then
+		echo -e "Test $i: \e[92mPASS\e[0m" >> result_reg
+		echo -e "Test $i: \e[92mPASS\e[0m" 
+	else
+		echo -e "Test $i: \e[31mFAIL\e[0m" >> result_reg
+		echo -e "Test $i: \e[31mFAIL\e[0m"
+	fi
+done

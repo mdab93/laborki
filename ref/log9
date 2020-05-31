@@ -2,11 +2,4 @@
 #### WSBShell_2019 1.3 ####
 ###########################
 
-Executing file: 9
-test9
-dzialanie poprawne
-A
--ab
---c
---a
-G
+[ERROR] File 'testy/9' does not exist.

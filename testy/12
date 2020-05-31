@@ -1,0 +1,14 @@
+puts "test12"
+if {[catch {add_object A}] == 0} {
+        puts "OK - add_object A"
+} else {
+        puts "Error - add_object A"
+}
+
+if {[catch {add_object ab -below A}] == 0} {
+        puts "OK - add_object ab - below A"
+} else {
+        puts "Error - add_object ab -below A
+}
+display_object
+exit

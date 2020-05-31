@@ -1,0 +1,11 @@
+puts "test27"
+set x [list "!" "@" "#" "%" "^" "*" "-" "_" "=" "+"]
+foreach j $x {
+	puts $j
+	if {[catch {add_object $j}] == 0} {
+		puts "dzialanie niepoprawne $j"
+	} else {
+		puts "dzialanie poprawne $j"
+} 
+display_object
+exit
