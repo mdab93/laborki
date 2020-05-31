@@ -1,0 +1,14 @@
+
+#### WSBShell_2019 1.3 ####
+###########################
+
+Executing file: 13
+test13
+OK - dodanie objektu A
+OK - dodanie objektu ab pod A
+OK - dodanie objektu c pod A-ab
+OK - dodanie objektu G
+A
+-ab
+--c
+G

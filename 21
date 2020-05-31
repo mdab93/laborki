@@ -1,0 +1,11 @@
+puts "test21"
+add_object A
+add_object a -below A
+add_object B
+if {[catch {delete_object B - below a}] == 0} {
+	puts "Dzialanie niepoprawne"
+} else {
+	puts "Dzialanie poprawne"
+}
+display_object
+exit

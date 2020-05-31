@@ -1,0 +1,30 @@
+
+#### WSBShell_2019 1.3 ####
+###########################
+
+Executing file: 1
+Test1
+Commands:
+################
+read_file <string>
+    reads input data from file
+
+write_file <string>
+    writes out data to file
+
+execute_script <string>
+    runs set of commands from file
+
+display_object [-below <string[/string]>]
+    shows all objects or subset under hierachy
+
+delete_object <string> [-below <string[/string]>]
+    removes top level object or objects under hierarchy
+
+add_object <string> [-below <string[/string]>]
+    adds object on top level or under hierarchy
+
+exit
+    exits the tool
+
+Dzialanie poprawne

@@ -1,2 +1,8 @@
-delete_object error
+puts "test16"
+if {[catch {delete_object error}] == 0} {
+	puts "Bledne dzialanie"
+} else {
+	puts "Poprawne dzialanie"
+}
+display_object
 exit

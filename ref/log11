@@ -1,0 +1,12 @@
+
+#### WSBShell_2019 1.3 ####
+###########################
+
+Executing file: 11
+test11
+OK - add_object A
+OK - add_object ab - below A
+OK - add_object c -below A/ab
+A
+-ab
+--c

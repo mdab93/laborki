@@ -1,0 +1,8 @@
+puts "test22"
+if {[catch {ADD_OBJECT C}] == 0} {
+	puts "Dzialanie niepoprawne"
+} else {
+	pust "Dzialanie poprawne"
+}
+display_object
+exit

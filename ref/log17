@@ -1,0 +1,13 @@
+
+#### WSBShell_2019 1.3 ####
+###########################
+
+Executing file: 17
+test17
+[ERROR] Name 'c' already exists.
+Poprawne dzialanie
+A
+-ab
+--c
+-x
+G

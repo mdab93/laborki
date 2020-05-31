@@ -1,6 +1,8 @@
 add_object A
+add_object B
 add_object ab -below A
-add_object G
-add_object c -below A/ab
+for {set i 0} {$i < 100} {incr i} {
+        add_object a$i -below A/ab
+}
 display_object -below A
 exit

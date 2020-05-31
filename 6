@@ -1,7 +1,12 @@
+puts "test6"
 add_object A
 add_object ab -below A
 add_object G
 add_object c -below A/ab
-delete_object A
+if {[catch {delete_object A}] == 0} {
+	puts "dzialanie poprawne"
+} else {
+	puts "dzialanie niepoprawne"
+}
 display_object
 exit

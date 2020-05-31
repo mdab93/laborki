@@ -1,0 +1,5 @@
+for {set i 0} {$i < 100} {incr i} {
+	add_object A$i
+}
+display_object
+exit

@@ -1,0 +1,7 @@
+puts "test20"
+add_object A
+add_object ab - below A
+
+display_object -below a
+
+exit

@@ -1,0 +1,13 @@
+
+#### WSBShell_2019 1.3 ####
+###########################
+
+Executing file: 25
+test25
+[ERROR] Name 'x' already exists.
+dzialanie poprawne
+A
+-ab
+--c
+-x
+G

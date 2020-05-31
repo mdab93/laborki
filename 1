@@ -1,2 +1,7 @@
-help
+puts "Test1"
+if {[catch {help}] == 0} {
+	puts "Dzialanie poprawne"
+} else {
+	puts "Dzialanie niepoprawne"
+}
 exit

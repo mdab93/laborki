@@ -1,0 +1,246 @@
+puts "Test1"
+if {[catch {help}] == 0} {
+	puts "Dzialanie poprawne"
+} else {
+	puts "Dzialanie niepoprawne"
+}
+delete_object
+puts "test10"
+if {[catch {add_object A}] == 0} {
+	puts "OK"
+} else {
+	puts "Error"
+}
+display_object
+delete_object
+puts "test11"
+if {[catch {add_object A}] == 0} {
+        puts "OK - add_object A"
+} else {
+        puts "Error - add_object A"
+}
+
+if {[catch {add_object ab -below A}] == 0} {
+	puts "OK - add_object ab - below A"
+} else {
+	puts "Error - add_object ab -below A
+}
+
+if {[catch {add_object c -below A/ab}] == 0} {
+	puts "OK - add_object c -below A/ab"
+} else {
+	puts "Error - add_object c -below A/ab"
+}
+display_object
+delete_object
+puts "test12"
+if {[catch {add_object A}] == 0} {
+        puts "OK - add_object A"
+} else {
+        puts "Error - add_object A"
+}
+
+if {[catch {add_object ab -below A}] == 0} {
+        puts "OK - add_object ab - below A"
+} else {
+        puts "Error - add_object ab -below A
+}
+display_object
+delete_object
+puts "test13"
+if {[catch {add_object A}] == 0} {
+        puts "OK - dodanie objektu A"
+} else {
+        puts "Error - dodanie objektu A"
+}
+
+if {[catch {add_object ab -below A}] == 0} {
+        puts "OK - dodanie objektu ab pod A"
+} else {
+        puts "Error - dodanie objektu ab pod A
+}
+
+if {[catch {add_object c -below A/ab}] == 0} {
+        puts "OK - dodanie objektu c pod A-ab"
+} else {
+        puts "Error - dodanie objektu c pod A-ab"
+}
+
+if {[catch {add_object G}] == 0} {
+        puts "OK - dodanie objektu G"
+} else {
+        puts "Error - dodanie objektu G"
+}
+display_object
+delete_object
+puts "test14"
+if {[catch {add_object A}] == 0} {
+        puts "OK - dodanie objektu A"
+} else {
+        puts "Error - dodanie objektu A"
+}
+
+if {[catch {add_object ab -below A}] == 0} {
+        puts "OK - dodanie objektu ab pod A"
+} else {
+        puts "Error - dodanie objektu ab pod A
+}
+
+if {[catch {add_object c -below A/ab}] == 0} {
+        puts "OK - dodanie objektu c pod A-ab"
+} else {
+        puts "Error - dodanie objektu c pod A-ab"
+}
+
+if {[catch {add_object G}] == 0} {
+        puts "OK - dodanie objektu G"
+} else {
+        puts "Error - dodanie objektu G"
+}
+
+if {[catch {add_object x -below A}] == 0} {
+        puts "OK - dodanie objektu x pod A"
+} else {
+        puts "Error - dodanie objektu x pod A"
+}
+
+display_object
+delete_object
+delete_object
+puts "test16"
+if {[catch {delete_object error}] == 0} {
+	puts "Bledne dzialanie"
+} else {
+	puts "Poprawne dzialanie"
+}
+display_object
+delete_object
+puts "test17"
+add_object A
+add_object ab -below A
+add_object c -below A/ab
+add_object G
+add_object x -below A
+
+if {[catch {add_object c -below A/ab}] == 0} {
+	puts "Bledne dzialanie"
+} else {
+	puts "Poprawne dzialanie"
+}
+display_object
+delete_object
+puts "test18"
+add_object A
+add_object ab -below A
+add_object c -below A/ab
+add_object G
+add_object x -below A
+
+if {[catch {add_object c -below A/ab/xyz}] == 0} {
+	puts "bledne dzialanie"
+} else {
+	puts "poprawne dzialanie"
+}
+display_object
+delete_object
+puts "Test2"
+add_object A
+if {[catch {display_object A}] == 0} {
+	puts "Error"
+} else {
+	puts "Dzialanie poprawne"
+}
+delete_object
+puts "test20"
+add_object A
+add_object ab - below A
+
+display_object -below a
+
+delete_object
+puts "test21"
+add_object A
+add_object a -below A
+add_object B
+if {[catch {delete_object B - below a}] == 0} {
+	puts "Dzialanie niepoprawne"
+} else {
+	puts "Dzialanie poprawne"
+}
+display_object
+delete_object
+puts "test22"
+if {[catch {ADD_OBJECT C}] == 0} {
+	puts "Dzialanie niepoprawne"
+} else {
+	pust "Dzialanie poprawne"
+}
+display_object
+delete_object
+puts "test25"
+add_object A
+add_object ab -below A
+add_object c -below A/ab
+add_object G
+add_object x -below A
+if {[catch {add_object x -below G}] == 0} {
+	puts "dzialanie niepoprawne"
+} else {
+	puts "dzialanie poprawne"
+}
+display_object
+delete_object
+
+puts "test26"
+add_object A
+add_object a
+delete_object A
+add_object A
+if {[catch {add_object A -below A}] == 0} {
+	puts "dzialanie niepoprawne"
+} else {
+	puts "dzialanie poprawne"
+}
+if {[catch {add_object a -below a}] == 0} {
+        puts "dzialanie niepoprawne"
+} else {
+        puts "dzialanie poprawne"
+}
+
+
+display_object
+delete_object
+
+puts "test27"
+set x [list "!" "@" "#" "%" "^" "*" "-" "_" "=" "+"]
+foreach j $x {
+	puts $j
+	if {[catch {add_object $j}] == 0} {
+		puts "dzialanie niepoprawne $j"
+	} else {
+		puts "dzialanie poprawne $j"
+} 
+display_object
+delete_object
+puts "tests 28"
+add_object A
+add_object ab -below A
+add_object c -below A/ab
+add_object G
+add_object x -below A
+if {[catch {add_object s -below G/ab}] == 0} {
+	puts "dzialanie niepoprawne"
+} else {
+	puts "dzialnie poprawne"
+}
+display_object
+delete_object
+
+puts "test29"
+if {[catch {add_object}] == 0} {
+	puts "dzialanie niepoprawne"
+} else {
+	puts "dzialanie poprawne"
+}
+display_object
+delete_object

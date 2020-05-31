@@ -1,6 +1,10 @@
-add_object A
-add_object ab -below A
-add_object G
-add_object c -below A/ab
-display_object
+puts "Test 3"
+for {set i 0} {$i < 100} {incr i} {
+	add_object A$i
+}
+if {[catch {display_object}] == 0} {
+	puts "Dzialanie poprawne"
+} else {
+	puts "Dznialanie niepoprawne"
+}
 exit
